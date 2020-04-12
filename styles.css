@@ -8,7 +8,6 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	border-style: outset;
-	line-height: 125px;
 	padding: 10px 10px 10px 10px;
 	width: 80%;
 	height: 90%;
@@ -25,6 +24,7 @@ label{
 }
 
 header{
+	text-align: center;
 	font-family: fantasy;
 	font-size: x-large;
 	font-style: italic;
@@ -37,7 +37,6 @@ footer{
 }
 
 h1{
-	text-align: center;
 	text-decoration: underline;
 	text-shadow: 4px 4px 6px dimgrey;
 }
@@ -67,7 +66,15 @@ option,select,textarea{
 	text-align: center;
 	display: block;
 	margin: auto;
-	background: linear-gradient( 45deg, #FAEBD7 50%, PapayaWhip 150% );
+	background: linear-gradient( 45deg, white 30%, black 270% );
 }
 
+#Categories{
+	text-align: center;
+}
 
+a:hover{
+	color: white; 
+	border-radius: 3px;
+	background: black;
+}
