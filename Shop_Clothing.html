@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Shop Clothing</title>
+		<link type = "text/css" rel = "stylesheet" href = "CStyles/styles.css">
+	</head>
+
+	<body>
+	    
+		<header>
+			<hr/>
+			<h2>Shop Clothing</h2>
+			<p><a class = "Home" href = "Homepage.php">Home</a></p>
+			<hr/>
+		</header>
+		
+		<div id = "Categories">
+			<form method = "post" action = "">
+			    <table style = 'font-size: 20px;' border = '1'>
+    			    <script>
+        			    /*Referenced The MAP(key,value) relationship from Website (JAVASCRIPT.INFO )*/
+        
+                        //Holds a key value pair.(Key:Label => Value:Image URL)
+                        let apparel_type = new Map([ ['Holiday Shirts', "Images/Shirt.png"],
+                        			                 ['Holiday Socks', "Images/Sock.jpg"],
+                        			                 ['Holiday Sweaters',"Images/Sweater.jpg"],
+                        			                 ['Holiday Pants',"Images/Pants.jpg"],
+                        			                 ['Holiday Gloves',"Images/Glove.jpg"],
+                        			                 ['Holiday Hats',"Images/Hat.jpeg"]
+                        			               ]);
+                        			               
+                        //Displays the labels with two columns for each row.
+                        var number_of_labels_printed = 0;
+                        //Holds the label values to display(Names of products)   
+                        var apparel_labels = "<tr>";
+                        var label_name = "";
+                        var tokenized_label_name = "";
+                        for(const [key, value] of apparel_type.entries())
+                        {
+                            label_name += (key + "#" + number_of_labels_printed);
+                            tokenized_label_name = label_name.split("#");
+                            tokenized_label_number = tokenized_label_name[1];
+                            
+                            
+                            if(tokenized_label_number % 2 == 0 && number_of_labels_printed != 0 )
+                            {
+                                apparel_labels += "</tr>";
+                                apparel_labels += "<td><b>" + key + "</b><input name = 'apparel_type' type = 'radio' value = '" + key + "' required></td>";
+                                label_name = key;
+                            }
+                            else if(tokenized_label_number % 3 == 0 && number_of_labels_printed < 2)
+                            {
+                                
+                                apparel_labels += "<tr>";
+                                apparel_labels += "<td><b>" + key + "</b><input name = 'apparel_type' type = 'radio' value = '" + key + "' required></td>";
+                            }
+                            else 
+                            {
+                                apparel_labels += "<td><b>" + key + "</b><input name = 'apparel_type' type = 'radio' value = '" + key + "' required></td>";
+                            }
+                            label_name = "";
+                            tokenized_label_name = "";
+                                
+                            apparel_labels += "<td><img src = '" + value + "' alt = '" + key + "' width = 355 height = 300/></td>";
+                            number_of_labels_printed++;
+                        }
+                        document.writeln(apparel_labels);
+                        
+                        let clothing_categories = ['Baby','Toddler','Teen','Men','Women','Pet'];
+                        var categories_options = "";
+                        
+                        for(var index = 0; index < clothing_categories.length; index++)
+                            categories_options += "<option>" + clothing_categories[index] + "</option>";
+                        
+                        document.writeln("<p><label>Choose category: <select name =  'clothing_category' value = '" + categories_options + "' style =  'width: auto' required>" + categories_options + "</select></label></p>");
+                        
+                        let clothing_holidays = ['Holloween','Thanksgiving','Christmas','Easter','New Years Day','Presidents Day'];
+                        var holiday_options = "";
+                        
+                        for(var index = 0; index < clothing_holidays.length; index++)
+                            holiday_options += "<option>" + clothing_holidays[index] + "</option>";
+                        
+                        document.writeln("<p><label>Choose holiday: <select name =  'clothing_holiday' value = '" + holiday_options + "' style =  'width: auto' required>" + holiday_options + "</select></label></p>");
+
+    			    </script>
+			    </table>
+				<p>
+					<input type = "submit" value = "Submit"/>
+					<input type = "reset" value = "Clear" />
+				</p>
+			</form>
+		</div>
+				
+		<footer>
+			<h6>&copy; 2020 by Holiday Apparel, Inc. All rights reserved</h6>
+		</footer>
+	</body>
+</html>
+
+<!--
+	<script type = "text/javascript" src = "JavaScript_scripts/display_holiday_apparels.js"></script>
+
