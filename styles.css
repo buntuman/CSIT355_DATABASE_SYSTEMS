@@ -8,6 +8,10 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	border-style: outset;
+	/* [ Mainly used for the login screen to make it larger ]
+		line-height: 125px;
+	   ( Commented because it looks better for the homepage )
+	*/
 	padding: 10px 10px 10px 10px;
 	width: 80%;
 	height: 90%;
@@ -67,6 +71,7 @@ option,select,textarea{
 	display: block;
 	margin: auto;
 	background: linear-gradient( 45deg, white 30%, black 270% );
+	/*background: linear-gradient( 45deg, #A9A9A9 50%, PapayaWhip 150% );*/
 }
 
 #Categories{
