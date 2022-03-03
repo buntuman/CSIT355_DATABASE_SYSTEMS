@@ -4,13 +4,7 @@ require_once('database_mysqli.php');
 
     session_start();
 	
-	/*[Get the data from the 'name' attribute from the HTML form.(Store it in a global variable)]
 	
-	    filter_input(): Makes sure that the values have been set in the superglobals variables.(Prevents undefined variables error, by checking if it is set or not)
-	    filter_input(): Validates user input.
-	    
-	    Protects against malicious input.
-	*/
 	$user_role = filter_input(INPUT_POST, 'user_role');
 	$user_name = filter_input(INPUT_POST, 'user_name');
 	$user_password = filter_input(INPUT_POST, 'user_password');
