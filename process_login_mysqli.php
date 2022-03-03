@@ -3,13 +3,6 @@
 require_once('database_mysqli.php');
 
     session_start();
-    
-
-	/*[IMPORTANT!!]
-		The post method in the html form (.html) should match the POST request in this php file(.php).
-		
-		Code is referenced from the book (Murach's PHP and MySQL).
-	*/
 	
 	/*[Get the data from the 'name' attribute from the HTML form.(Store it in a global variable)]
 	
