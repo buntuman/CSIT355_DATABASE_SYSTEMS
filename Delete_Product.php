@@ -2,18 +2,6 @@
 //Execute the code found in (database_mysqli.php to connect to the database and make sure the script runs once).
 require_once('database_mysqli.php');
 
-    $product_names = filter_input(INPUT_POST, 'product_names', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
-    
-   if($product_names !== NULL){
-        $query = "DELETE FROM products WHERE id = ?";                       
-        $statement = $db->prepare($query);
-    
-        
-    }else{
-        $error_message_check_box = 'Select a checkbox to delete a product';
-        include('View_Products.php');
-        exit();
-    }
     
     //If zero then the SQL statement was a success.(Executes properly)
     $is_execution_successful = 0;
