@@ -14,16 +14,11 @@ require_once('database_mysqli.php');
     */
     //Check to see if array contains atleast one item.(Protects against an empty array, therefore protecting against all tables from being deleted)
     if($product_names !== NULL){
-        $query = "DELETE FROM products WHERE id = ?"; 
-        
-        //Returns an object.       
-        //Prepare() statement improves both database security and performance.                       
+        $query = "DELETE FROM products WHERE id = ?";                       
         $statement = $db->prepare($query);
     
         
     }else{
-        //Error occurs when the user selects delete and does not select any checkbox.
-        //Error message that will be displayed to the user on the view users page.
         $error_message_check_box = 'Select a checkbox to delete a product';
         include('View_Products.php');
         exit();
