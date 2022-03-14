@@ -1,17 +1,7 @@
 <?php
-//Execute the code found in (database_mysqli.php to connect to the database and makes sure the script runs once).
-require_once('database_mysqli.php');
 
-    /*
-        Code is referenced from PHP and MYSQL Murach's.
-    */
+     $product_id = isset($_POST['$id']);
 
-    //Get all elements in the specified array and apply a filter to make them safe to use.
-    //(FILTER_REQUIRE_ARRAY constant ensures the function gets the array correctly otherwise if you don't it won't get the array correctly)
-    //(FILTER_SANITIZE_SPECIAL_CHARS constant replaces special characters (such as: <and> with HTML entites)to guard against xss attacks.(Script injections are malicious)
-    $product_id = isset($_POST['$id']);
-    
-    //Check to see if it is set.(Protects)
     if($product){
         //Prepared statements improve the performance and security of the application.(Use whenever possible)
         //Uses ? for parameters.[WHERE database_column_data = :user_entered_data]
