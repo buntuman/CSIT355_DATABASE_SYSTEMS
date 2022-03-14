@@ -52,22 +52,15 @@ require_once('database_mysqli.php');
 	    because we SQL automatically matches the credentials with the correct user chosen in the drop down list.(Don't have to manually check if they match)
 	*/
 	
-	//With SQL Join.
-	//Don't need long if statement.(Only need this when using SQL join)
+	// With SQL Join.
 	if($isClientCredentialsValid)
 	{
 	    $error_message = '';
-	    $permit = "Logged in as: ";
-	    $response = $username;
 	    include('Homepage.php');
 	}
 	else 
 	{
 	    $error_message = 'Invalid credentials';
-	    /*[DEBUGGING PURPOSES]
-	        $permit = "Username not found [";
-	        $response = $user_name."] or password not found: [". $user_password."] as a ".$user_role;
-	    */
 	    include('Login_Page.php');
 	}
 	
