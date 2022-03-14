@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset = "utf-8">
-		<title>Holiday Apparel Homepage</title>
-		<link type = "text/css" rel = "stylesheet" href = "CStyles/styles.css">
-	</head>
+	
 	<body>
 		<header>
 			<h1>Holiday Apparel</h1>
