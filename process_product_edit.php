@@ -16,9 +16,6 @@
     //If zero then the SQL statement was a success.(Executes properly)
     $is_execution_successful = 0;
     
-    
-    $statement->bind_param("idii",$stock, $price, $sku, $product_id);
-        
     $is_execution_successful  = $statement->execute();
     
     if($is_execution_successful)
