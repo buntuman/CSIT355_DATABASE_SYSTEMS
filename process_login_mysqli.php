@@ -4,14 +4,6 @@ require_once('database_mysqli.php');
   
 /*------------------------------------------------------------------------------[DATABASE ACCESS]--------------------------------------------------------------------------*/
 
-
-    /*[Retrieve the data using the SQL SELECT statement]
-        First query returns a result set of a single row that matches the username and password the user has entered into the form of the login page.
-    */
-    
-    /*[Test to display the input from the user.For Debugging purposes]
-        echo "<p>user entered: [ username: ".$user_name.", password: ".$user_password."]</p>";
-    */
     
     //Prepared statements improve the performance and security of the application.(Use whenever possible) 
     //Uses ? for parameters.
