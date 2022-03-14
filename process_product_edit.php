@@ -3,18 +3,11 @@
      $product_id = isset($_POST['$id']);
 
     if($product){
-        //Prepared statements improve the performance and security of the application.(Use whenever possible)
-        //Uses ? for parameters.[WHERE database_column_data = :user_entered_data]
         $query = "UPDATE products SET stock = ?, price = ?, sku = ? WHERE id = ?"; //Use * only when you want to bind many variables to all column attribute values to be used.
-        
-        //Returns an object.       
-        //Prepare() statement improves both database security and performance.                       
+                     
         $statement = $db->prepare($query);
     
-        
     }else{
-        //Error occurs when the user selects delete and does not select any check box.
-        //Error message that will be displayed to the user on the view users page.
         $error_message_check_box = 'Select a check box to modify a product';
         include('View_Products.php');
         exit();
