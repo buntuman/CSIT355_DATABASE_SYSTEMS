@@ -15,10 +15,6 @@ require_once('database_mysqli.php');
         exit();
     }
     
-    /*
-        Loop the entire array user_types to bind to the parameter and delete each one that has the same values.
-        Ex: User_id[0] = 10000 ,User_id[1] = 10001 
-    */
     //If zero then the SQL statement was a success.(Executes properly)
     $is_execution_successful = 0;
     
