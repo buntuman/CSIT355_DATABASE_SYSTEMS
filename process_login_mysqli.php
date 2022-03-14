@@ -37,14 +37,4 @@ require_once('database_mysqli.php');
     
 	//Free resources.
 	$statement->close();
-	
-	//If the credentials the user entered are correct.(Log in if the user credentials match the correct information in the database and matches the selection box)
-	
-	/*[This code would have to be used to verify if the user logging in is a specific user without using SQL Join. ]
-	    [Without SQL Join]
-	    $does_selection_match_login_info = (($user_role == 'administrator' && $role_id == 1) ||  ($user_role == 'manager'  && $role_id == 2)  || ($user_role == 'employee' && $role_id == 3) || ($user_role == 'customer' && $role_id == 4));
-	    
-	    SQL Join prevents if statement code from being long.(Don't need when using join) SQL takes care of it automatically.(Improves code dramtically) 
-	    because we SQL automatically matches the credentials with the correct user chosen in the drop down list.(Don't have to manually check if they match)
-	*/
 ?>
