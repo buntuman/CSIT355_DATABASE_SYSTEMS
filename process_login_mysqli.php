@@ -1,9 +1,4 @@
 <?php
-//Execute the code found in (database_mysqli.php to connect to the database and makes sure the script runs once).
-require_once('database_mysqli.php');
-  
-/*------------------------------------------------------------------------------[DATABASE ACCESS]--------------------------------------------------------------------------*/
-
     /*[Without SQL JOIN]
         $query = "SELECT username, passwor_d, role_id FROM USERS WHERE username = ? AND passwor_d = ?"; //Use * only when you want to bind many variables to all column attribute values to be used.
     */
