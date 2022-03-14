@@ -2,12 +2,6 @@
 <html>
 	
 	<body>
-		<header>
-			<h1>Holiday Apparel</h1>
-			<h5>| Address: xxx Montclair Ave |  Phone: xxx-xxx-xxxx |</h5>
-			<hr/>
-		</header>
-		
 		<div id = "Links">
 		        <!--To get the element value of the from the home page.(It goes through to process_login.php), so we have to retrieve it from that file if the user logs in correctly.-->
 		        <?php if($user_role == 'Administrator' ||  $user_role == 'Manager'  || $user_role == 'Employee' || $user_role == 'Customer'){?> 
