@@ -2,9 +2,6 @@
 //Execute the code found in (database_mysqli.php to connect to the database and make sure the script runs once).
 require_once('database_mysqli.php');
 
-    //Get all elements in the specified array and apply a filter to make them safe to use.
-    //(FILTER_REQUIRE_ARRAY constant ensures the function gets the array correctly otherwise if you don't it won't get the array correctly)
-    //(FILTER_SANITIZE_SPECIAL_CHARS constant replaces special characters (such as: <and> with HTML entities)to guard against xss attacks.(Script injections are malicious)
     $product_names = filter_input(INPUT_POST, 'product_names', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
     
     /*
