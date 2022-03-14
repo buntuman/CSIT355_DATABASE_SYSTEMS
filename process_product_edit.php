@@ -3,7 +3,7 @@
      $product_id = isset($_POST['$id']);
 
     if($product){
-        $query = "UPDATE products SET stock = ?, price = ?, sku = ? WHERE id = ?"; //Use * only when you want to bind many variables to all column attribute values to be used.
+        $query = "UPDATE products SET stock = ?, price = ?, sku = ? WHERE id = ?";  
                      
         $statement = $db->prepare($query);
     
