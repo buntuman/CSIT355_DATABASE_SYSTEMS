@@ -1,7 +1,5 @@
 <?php
-    /*[Without SQL JOIN]
-        $query = "SELECT username, passwor_d, role_id FROM USERS WHERE username = ? AND passwor_d = ?"; //Use * only when you want to bind many variables to all column attribute values to be used.
-    */
+    
     //With SQL Join
     $query = "SELECT username, passwor_d, role_id, role_description FROM USERS,ROLE WHERE username = ? AND passwor_d = ? AND role_description = ? AND role_id = user_role_id"; 
     
