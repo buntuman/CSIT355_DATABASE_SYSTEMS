@@ -35,11 +35,6 @@
 		<p>Welcome to Holiday Apparel!</p> 
 		<p>Holiday Shoes, Socks, Pants, Sweats, Hats, Shirts.</p> 
 		<footer>
-		    <?php if($user_role == 'Administrator' ||  $user_role == 'Manager'  || $user_role == 'Employee' || $user_role == 'Customer'){?> 
-		    <a class = "selection"  href = "Login_Page.php">Logout</a>
-		    <?php }else{?>
-		    <a class = "selection"  href = "Login_Page.php">Sign in</a>
-		    <?php }?>
 			<h6>&copy; 2020 by Holiday Apparel, Inc. All rights reserved</h6>
 		</footer>
 	</body>
