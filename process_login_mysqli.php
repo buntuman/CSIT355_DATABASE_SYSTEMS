@@ -1,31 +1,7 @@
 <?php
 //Execute the code found in (database_mysqli.php to connect to the database and makes sure the script runs once).
 require_once('database_mysqli.php');
-
-    session_start();
-	
-	
-	$user_role = filter_input(INPUT_POST, 'user_role');
-	$user_name = filter_input(INPUT_POST, 'user_name');
-	$user_password = filter_input(INPUT_POST, 'user_password');
-	
-	/*
-        [Code is referenced from Professor Herbert's lecture Slides(CS430)]
-	*/
-	
-	//Trim the whitespace from both the left and right side of the strings.(Enhances protection against SQL injection)
-	$user_name = trim($user_name);
-    $user_password = trim($user_password);
-
-    //Clean up the variable if magic_quotes is not activated.
-    if(!get_magic_quotes_gpc())
-    {
-    	//Provides minimum protection against SQL Injection.(Attempts to interrupt a SQL command from running a SQL command passed by the user in a form)
-        $user_name = addslashes($user_name);
-        $user_password = addslashes($user_password);
-    }
-    
-    
+  
 /*------------------------------------------------------------------------------[DATABASE ACCESS]--------------------------------------------------------------------------*/
 
 
