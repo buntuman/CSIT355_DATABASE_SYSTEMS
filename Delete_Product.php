@@ -14,9 +14,7 @@ require_once('database_mysqli.php');
     */
     //Check to see if array contains atleast one item.(Protects against an empty array, therefore protecting against all tables from being deleted)
     if($product_names !== NULL){
-        //Prepared statements improve the performance and security of the application.(Use whenever possible)
-        //Uses ? for parameters.[WHERE database_column_data = :user_entered_data]
-        $query = "DELETE FROM products WHERE id = ?"; //Use * only when you want to bind many variables to all column attribute values to be used.
+        $query = "DELETE FROM products WHERE id = ?"; 
         
         //Returns an object.       
         //Prepare() statement improves both database security and performance.                       
