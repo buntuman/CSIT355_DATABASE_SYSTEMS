@@ -12,17 +12,4 @@
     //With SQL JOIN
     $statement->bind_result($username, $password, $role_id, $role_description);// Extracts the tuple values(data) and stores them into variables.(Bounded it to a memory location)
 	
-	//Executes the SQL statement.
-	$statement->execute();
-
-	
-	//Tells if the one record is retrieved for that specific user. (Solved Problem through debugging by using echo print statement)
-	//The method fetch(): copies the values from the current row into the bound variables.(Returns true(1) when user enters in correct credentials, and does not print out anything if row is not retrieved)
-	$isClientCredentialsValid = $statement->fetch();
-    
-    
-        $_SESSION['username'] = $username;
-    
-	//Free resources.
-	$statement->close();
 ?>
