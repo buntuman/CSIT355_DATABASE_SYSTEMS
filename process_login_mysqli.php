@@ -47,19 +47,4 @@ require_once('database_mysqli.php');
 	    SQL Join prevents if statement code from being long.(Don't need when using join) SQL takes care of it automatically.(Improves code dramtically) 
 	    because we SQL automatically matches the credentials with the correct user chosen in the drop down list.(Don't have to manually check if they match)
 	*/
-	
-	// With SQL Join.
-	if($isClientCredentialsValid)
-	{
-	    $error_message = '';
-	    include('Homepage.php');
-	}
-	else 
-	{
-	    $error_message = 'Invalid credentials';
-	    include('Login_Page.php');
-	}
-	
-	//[DEBUGGING PURPOSES]
-	echo "<p>".$permit.$response."</p>";   
 ?>
