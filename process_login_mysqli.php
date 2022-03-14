@@ -9,9 +9,6 @@
 	$statement->bind_param("sss",$user_name, $user_password, $user_role);
 	
 	//Bind the columns in the result set to the variables that provide access to their values.(Binds username and passwor_d to the parameters $username, $password, $role_id)
-    /*[Without SQL Join]
-        $statement->bind_result($username, $password, $role_id);
-    */
     //With SQL JOIN
     $statement->bind_result($username, $password, $role_id, $role_description);// Extracts the tuple values(data) and stores them into variables.(Bounded it to a memory location)
 	
