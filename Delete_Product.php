@@ -4,13 +4,7 @@ require_once('database_mysqli.php');
 
     $product_names = filter_input(INPUT_POST, 'product_names', FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
     
-    /*
-        Must prevent the whole table from being deleted by not allowing the WHERE clause to be empty.
-        To circumvend this we need to check if the array contains at least one value.(Can't be identical or of the same type as null)
-        Otherwise it will delete the entire table.(Prevents administrator from accidentally deleting all accounts)
-    */
-    //Check to see if array contains atleast one item.(Protects against an empty array, therefore protecting against all tables from being deleted)
-    if($product_names !== NULL){
+   if($product_names !== NULL){
         $query = "DELETE FROM products WHERE id = ?";                       
         $statement = $db->prepare($query);
     
