@@ -4,9 +4,7 @@
     $query = "SELECT username, passwor_d, role_id, role_description FROM USERS,ROLE WHERE username = ? AND passwor_d = ? AND role_description = ? AND role_id = user_role_id"; 
     
     //Binds the value to the parameter.(string format: s, and ss since there are two string arguments)
-	/*[Without SQL Join]
-	    $statement->bind_param("ss",$user_name, $user_password);
-	*/
+	
 	// With SQL JOIN
 	$statement->bind_param("sss",$user_name, $user_password, $user_role);
 	
