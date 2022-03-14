@@ -22,11 +22,5 @@
         			<a class = "selection"  href = "View_Users.php">View_User_Accounts</a>
         		<?php }?>
 		</div>
-		<p>Welcome to Holiday Apparel!</p> 
-		<p>Holiday Shoes, Socks, Pants, Sweats, Hats, Shirts.</p> 
-		<footer>
-			<h6>&copy; 2020 by Holiday Apparel, Inc. All rights reserved</h6>
-		</footer>
 	</body>
 </html>
-<!--Note: In order to save variables from one page to another it requires the use of sessions.-->
