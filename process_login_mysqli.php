@@ -72,13 +72,5 @@ require_once('database_mysqli.php');
 	}
 	
 	//[DEBUGGING PURPOSES]
-	echo "<p>".$permit.$response."</p>";
-	
-    
-    //Disconnect from server.(Close Connection)
-    $db->close();
-    
-    /*[Debugging]
-        echo 'Connection to database closed!';
-    */    
+	echo "<p>".$permit.$response."</p>";   
 ?>
