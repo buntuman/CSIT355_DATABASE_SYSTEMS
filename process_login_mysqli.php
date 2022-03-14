@@ -33,15 +33,11 @@ require_once('database_mysqli.php');
 	$isClientCredentialsValid = $statement->fetch();
     
     
-    $_SESSION['username'] = $username;
+        $_SESSION['username'] = $username;
     
 	//Free resources.
 	$statement->close();
 	
-	//If the user enters in the correct credentials then the message is empty.
-    $error_message = '';
-	
-    
 	//If the credentials the user entered are correct.(Log in if the user credentials match the correct information in the database and matches the selection box)
 	
 	/*[This code would have to be used to verify if the user logging in is a specific user without using SQL Join. ]
